@@ -1,7 +1,7 @@
 {
-  "name": "webpack_ubm",
+  "name": "blood-cat-design",
   "version": "1.0.0",
-  "description": "webpack_ubm代码模板",
+  "description": "bloodCat-design",
   "main": "index.js",
   "scripts": {
     "webpack": "webpack",

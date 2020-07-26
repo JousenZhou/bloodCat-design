@@ -1,17 +1,17 @@
-let path = require('path');
-let webpack = require('webpack');
-let HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
-    mode: "production",
+    mode: 'production',//"production",
     entry: "./src/index.js",
     // externals:{'vue': 'Vue'},
     output: {
         path: path.resolve(__dirname, `./dist`),
-        filename: "bloodCat",
+        filename: "bloodCat.js",
         libraryTarget: 'umd',//'commonjs',
-        library:'bloodCat'
+        library:'blood-cat-design'
     },
     module: {
         rules: [
@@ -124,6 +124,8 @@ module.exports = {
         //         /* 自动清除console*/
         //         compress: {
         //             // warnings: false, // 若打包错误，则注释这行
+        //             loops:true,
+        //             dead_code:true,
         //             drop_debugger: true,
         //             drop_console: true,
         //             pure_funcs: ['console.log']

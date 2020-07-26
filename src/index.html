@@ -6,12 +6,26 @@
 </head>
 <body>
     <P>BloodCat-design</P>
-    <div>
+    <div style="width: 300px;height: 300px">
         <blc-image
-                src='http://localhost:8080/src/bloodCat-image/%E6%B5%8B%E8%AF%95%E6%A0%B7%E6%9C%AC.jpg'
-                mode="grey"
-                width="300"
-                height="auto"/>
+                id="blc-image"
+                src='../static/image/1.jpg'
+                mode="triangle"
+                width="1000"
+        />
     </div>
+<script>
+    let item = document.getElementById('blc-image');
+    let map = ['../static/image/1.jpg',
+                '../static/image/2.jpg'];
+    let num = 0;
+    console.log(item)
+    setInterval(()=>{
+        item.setAttribute('src',map[num = Math.abs(num-1)])
+    },10000)
+</script>
 </body>
+<style>
+
+</style>
 </html>
